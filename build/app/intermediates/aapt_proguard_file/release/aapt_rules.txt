@@ -1,0 +1,2 @@
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+-keep class br.com.felipe1almeida.flutter_delivery_app.MainActivity { <init>(); }
