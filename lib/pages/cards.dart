@@ -6,6 +6,7 @@ import 'package:flutter_delivery_app/widgets/credit_card.dart';
 import 'package:flutter_delivery_app/widgets/custom_button.dart';
 import 'package:flutter_delivery_app/widgets/custom_textfield.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
 class Cards extends GetView<CardsController> {
@@ -15,8 +16,9 @@ class Cards extends GetView<CardsController> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Color(0xffF6F5F5),
-        leading: Icon(
-          Icons.arrow_back_ios,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () => Get.back(),
           color: Colors.black,
         ),
       ),
@@ -105,6 +107,7 @@ class Cards extends GetView<CardsController> {
               SizedBox(height: 55),
               CustomButton(
                 text: 'use this card',
+                onPressed: () {},
               ),
             ],
           ),

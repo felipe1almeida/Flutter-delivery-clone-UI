@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_delivery_app/routes/pages.dart';
 import 'package:flutter_delivery_app/widgets/custom_button.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -38,7 +39,10 @@ class SplashScreen extends StatelessWidget {
             width: double.infinity,
             decoration: BoxDecoration(
               color: Color(0xffF6F5F5),
-              borderRadius: BorderRadius.circular(35),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(35),
+                topRight: Radius.circular(35),
+              ),
             ),
             child: Column(
               children: [
@@ -72,7 +76,10 @@ class SplashScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 48),
-                CustomButton(text: 'order now'),
+                CustomButton(
+                  text: 'order now',
+                  onPressed: () => Get.toNamed(Pages.CHECKOUT_SCROLL_VIEW),
+                ),
                 SizedBox(height: 32),
                 TextButton(
                   onPressed: () {},
