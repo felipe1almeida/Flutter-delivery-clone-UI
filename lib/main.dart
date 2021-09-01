@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_delivery_app/bindings/initial_bindings.dart';
 import 'package:flutter_delivery_app/pages/cards.dart';
+import 'package:flutter_delivery_app/routes/pages.dart';
+import 'package:flutter_delivery_app/routes/routes.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -17,6 +19,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'SF Pro Display',
       ),
       initialBinding: InitialBindings(),
+      initialRoute: Pages.SPLASH,
+      getPages: []..addAll(Routes.ROUTES),
       debugShowCheckedModeBanner: false,
       home: Cards(),
     );
